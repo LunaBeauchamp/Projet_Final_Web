@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,21 +10,20 @@
     <link rel="stylesheet" type="text/css" href="../css/style_Acceuil.css">
 </head>
 
-<body>
+<body >
     <form action="/my-handling-form-page" method="post">
-        <section>
-            <label class="question" for="Pseudonyme">Pseudonyme :</label>
-            <input class="réponse" type="text" id="Pseudonyme" name="user_pseudonyme" >
-        </section>
-        <section>
-            <label class="question" for="Ville">Ville :</label>
-            <input class="réponse" type="text" id="Ville" name="user_ville" >
-        </section>
-        <section><br><button type="submit">Envoyer </button></section>
+        <fieldset>
+            <section class="question">
+                <input class="réponse" type="text" id="Pseudonyme" name="user_pseudonyme" placeholder="Username">
+            </section>
+            <section class="question">
+                <input class="réponse" type="text" id="Ville" name="user_ville" placeholder="City">
+            </section>
+            <section class="question"><button id="envoyé" type="submit">Enter </button></section>
+        </fieldset>
     </form>
     <script src="../Js/script_Acceuil.js"></script>   
 </body>
 
 </html>
-=======
->>>>>>> parent of 7a8107e (html acceuil)
+

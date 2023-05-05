@@ -1,0 +1,41 @@
+body{
+    background-image: linear-gradient(to right, #b5da9c , #95c278);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+fieldset{
+    border: 0ch;
+    display: flex;
+    background-color: white;
+    width: 350px;
+    height: 200px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 50px;
+    box-shadow: 5px 5px 10px rgb(56, 60, 61);
+
+}
+
+.question{
+    height: 30px;
+    width: 100%;
+    flex: 1;
+    align-self: center;
+}
+
+.réponse{
+    background-color:#e9e5e5;
+    border: 0ch;
+    height: 50px;
+    width: 99%;   
+}
+
+#envoyé{
+    border: 0ch;
+    height: 50px;
+    width: 100%;
+    background-color: rgb(181, 218, 156);
+}
