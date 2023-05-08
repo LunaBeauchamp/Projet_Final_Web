@@ -1,0 +1,83 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+body{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 50px;
+}
+#image{
+    background-color: #edeaea;
+    width: 500px;
+    padding: 25px;
+    align-content: center;
+    justify-content: center;
+}
+
+section{
+    align-self: center;
+    width: 500px;
+    padding-left: 25px ;
+    align-content: center;
+    justify-content: center;
+}
+
+
+#Info > #chemin{
+    display: flex;
+    height: 30px;
+    background-color: #edeaea;
+}
+#Info > #chemin > p{
+    margin-left: 10px;
+    align-self: center;
+}
+
+fieldset, label { margin: 0; padding: 0; }
+
+.rating { 
+    border: none;
+    float: left;
+  }
+  
+  .rating > input { display: none; } 
+  .rating > label:before { 
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+  }
+  
+  .rating > .half:before { 
+    content: "\f089";
+    position: absolute;
+  }
+  
+  .rating > label { 
+    color: #ddd; 
+   float: right; 
+  }
+  
+  /***** CSS Magic to Highlight Stars on Hover *****/
+  
+  .rating > input:checked ~ label { color: #FFD700;  } /* show gold star when clicked */
+  
+#Prix{
+    display: flex;
+    width: 100%;
+}
+#Prix > p {
+    
+    color: gray;
+    align-self: center;
+}
+#Info > #cart {
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+    border: 0px;
+    color: white;
+    background-color: #4747f3;
+}

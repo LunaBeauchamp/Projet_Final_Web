@@ -1,0 +1,76 @@
+body{
+    background-color: #eaeaea;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+    margin-right: 50px;
+    justify-content: flex-start;
+}
+h1{
+width: 70%;
+}
+#météo{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+#ville{
+    height: 10px;
+}
+#province{
+    height: 10px;
+    font-size: small;
+}
+#température{
+    font-size: 1.4em;
+}
+
+#bonjour{
+    height: 10px;
+    width: 100%;
+
+    align-self: flex-end;
+
+}
+#Produits{
+
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.produit{
+    background-color: white;
+    border-color: #e6e4e4;
+
+    
+    width: 20%;
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.produit img{
+    width: 100%;
+}
+
+.texte{
+    align-self: flex-end;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.numPage{
+    background-color: #eaeaea;
+    border: 0px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.3em;
+}

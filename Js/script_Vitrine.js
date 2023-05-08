@@ -12,8 +12,10 @@ function créerVitrine(page, data){
         bouton.setAttribute('class', 'produit');
 
         let image = document.createElement('img')
-        image.setAttribute('src', produit.images[0])
+        image.setAttribute('src', produit.thumbnail)
 
+        let texte = document.createElement('div')
+        texte.setAttribute('class', "texte")
         let nom = document.createElement('p');
         nom.setAttribute('class', 'nom')
         nom.textContent = produit.title;
@@ -22,8 +24,9 @@ function créerVitrine(page, data){
         prix.textContent = `${Math.round(produit.price * (1 - produit.discountPercentage/100))}$`
 
         bouton.append(image);
-        bouton.append(nom);
-        bouton.append(prix);
+        texte.append(nom);
+        texte.append(prix);
+        bouton.append(texte)
         bouton.addEventListener("click", (e)=>{
             let pNom = bouton.querySelector(".nom");
             let produitChoisit;
@@ -70,18 +73,24 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=601d23a506f44ecca0918105323
     image_Température.setAttribute("src", data.current.condition.icon);
     image_Température.setAttribute('id', 'image_température')
 
+    let coordonné = document.createElement('span')
+    coordonné.setAttribute("id","coordonné")
     let bonjour = document.createElement('p');
     let nom = document.createElement('b')
     nom.textContent = user.username
     bonjour.textContent = `Hi `
     bonjour.append(nom);
     bonjour.setAttribute('id', 'bonjour')
+    bonjour.setAttribute("align", "right")
 
-    span.append(location_ville);
-    span.append(location_province);
+    coordonné.append(location_ville);
+    coordonné.append(location_province);
+    span.append(coordonné)
+    span.append(image_Température);
     span.append(température);
-    span.append(image_Température)
-    span.append(bonjour);
+    
+    let header = document.querySelector('header')
+    header.append(bonjour)
 })
 .catch(error => {
     console.error('An error occured. ', error);
@@ -107,7 +116,9 @@ fetch(`https://dummyjson.com/Products`, {
     let footer = document.querySelector('footer');
     for (let compt = 0; compt *10 < data.products.length;compt++){
         let bouton = document.createElement('button');
+        bouton.setAttribute('class', "numPage")
         bouton.textContent= `${compt+1}`;
+        bouton.setAttribute("id", `page${compt+1}`)
         bouton.addEventListener("click", (e)=>{
             let produits = document.querySelector('section')
             produits.innerHTML = ""
