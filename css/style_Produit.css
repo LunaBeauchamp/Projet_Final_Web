@@ -2,36 +2,52 @@
 
 body{
     display: flex;
-    align-content: center;
     justify-content: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 50px;
+    font-family: Helvetica;
+    margin-top: 150px;
+    font-size: 20px;
 }
+
 #image{
     background-color: #edeaea;
-    width: 500px;
+    max-width: 500px;
+    max-height: 500px;
     padding: 25px;
-    align-content: center;
-    justify-content: center;
+    align-self: center;
 }
 
 section{
     align-self: center;
     width: 500px;
     padding-left: 25px ;
-    align-content: center;
-    justify-content: center;
 }
 
 
-#Info > #chemin{
+#chemin{
     display: flex;
     height: 30px;
     background-color: #edeaea;
 }
-#Info > #chemin > p{
+
+#chemin > p{
     margin-left: 10px;
     align-self: center;
+}
+
+#Nom{
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#Category{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#Brand{
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 fieldset, label { margin: 0; padding: 0; }
@@ -66,18 +82,41 @@ fieldset, label { margin: 0; padding: 0; }
   
 #Prix{
     display: flex;
+    height: 73px;
     width: 100%;
+    align-items: center;
 }
+
+#Prix > h2 {
+    height: 61px;
+    font-size: 49px;
+    margin: 0px;
+}
+
 #Prix > p {
-    
     color: gray;
+    font-size: 27px;
     align-self: center;
+    margin: 0px;
+    margin-left: 15px;
 }
-#Info > #cart {
+
+#titreDescription{
+    margin: 0px;
+    margin-top: 10px;
+}
+
+#description{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#cart {
     border-radius: 5px;
-    height: 30px;
-    width: 150px;
+    height: 40px;
+    width: 190px;
     border: 0px;
+    font-size: 20px;
     color: white;
     background-color: #4747f3;
 }

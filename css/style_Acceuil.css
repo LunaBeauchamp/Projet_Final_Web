@@ -4,6 +4,7 @@ body{
     align-items: center;
     flex-direction: column;
     margin-top: 200px;
+    font-family: Helvetica;
 }
 
 fieldset{
@@ -16,7 +17,6 @@ fieldset{
     flex-direction: column;
     padding: 50px;
     box-shadow: 5px 5px 10px rgb(56, 60, 61);
-
 }
 
 .question{

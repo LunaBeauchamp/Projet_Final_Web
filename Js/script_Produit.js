@@ -46,7 +46,7 @@ let h2solde = document.createElement('h2')
 h2solde.textContent = `${Math.round(produit.price * (1 - produit.discountPercentage/100))}$`
 let pPrix = document.createElement('p')
 let barré = document.createElement('s')
-barré.textContent =`${produit.price}`
+barré.textContent =`${produit.price}$`
 pPrix.append(barré);
 Prix.append(h2solde);
 Prix.append(pPrix);

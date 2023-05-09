@@ -8,19 +8,21 @@ function créerVitrine(page, data){
         let produit = data.products[compt];
         produitsliste.push(produit);
 
-        let bouton = document.createElement('button')
+        let bouton = document.createElement('a')
         bouton.setAttribute('class', 'produit');
+        bouton.setAttribute("href", "Produit.html")
 
         let image = document.createElement('img')
         image.setAttribute('src', produit.thumbnail)
 
         let texte = document.createElement('div')
         texte.setAttribute('class', "texte")
-        let nom = document.createElement('p');
+        let nom = document.createElement('h3');
         nom.setAttribute('class', 'nom')
         nom.textContent = produit.title;
 
         let prix = document.createElement('p');
+        prix.setAttribute("class", "prix")
         prix.textContent = `${Math.round(produit.price * (1 - produit.discountPercentage/100))}$`
 
         bouton.append(image);
@@ -96,7 +98,8 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=601d23a506f44ecca0918105323
     console.error('An error occured. ', error);
 });
 //produits
-fetch(`https://dummyjson.com/Products`, {
+fetch(`https://dummyjson.com/Products?limit=100`, {
+    
     headers: {
         Accept: 'application/json;charset=utf-8'
     }
@@ -130,3 +133,4 @@ fetch(`https://dummyjson.com/Products`, {
 .catch(error => {
     console.error('An error occured. ', error);
 });
+
