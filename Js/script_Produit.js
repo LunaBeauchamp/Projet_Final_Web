@@ -2,7 +2,7 @@ let produit = JSON.parse(localStorage.getItem("produit"));
 console.log(produit);
 let body = document.querySelector('body');
 let image = document.createElement('img');
-image.setAttribute("src", produit.images[0]);
+image.setAttribute("src", produit.images[0]); //J'ai un issue pour les cookies qui vient du lien de l'image
 image.setAttribute("id", "image")
 body.prepend(image);
 

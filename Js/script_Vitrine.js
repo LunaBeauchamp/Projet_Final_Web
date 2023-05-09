@@ -12,8 +12,8 @@ function créerVitrine(page, data){
         bouton.setAttribute('class', 'produit');
         bouton.setAttribute("href", "Produit.html")
 
-        let image = document.createElement('img')
-        image.setAttribute('src', produit.thumbnail)
+        let image = document.createElement('img') 
+        image.setAttribute('src', produit.thumbnail) //J'ai un issue pour les cookies qui vient du lien du thumbnail
 
         let texte = document.createElement('div')
         texte.setAttribute('class', "texte")
@@ -98,18 +98,10 @@ fetch(`http://api.weatherapi.com/v1/current.json?key=601d23a506f44ecca0918105323
     console.error('An error occured. ', error);
 });
 //produits
-fetch(`https://dummyjson.com/Products?limit=100`, {
-    
-    headers: {
-        Accept: 'application/json;charset=utf-8'
-    }
-})
-.then(response => {
-     if (response.ok) {
-        return response.json();
-     }
-     throw new Error('Network response was not ok.');
-})
+fetch('https://dummyjson.com/products?limit=0')
+
+.then(res => res.json())
+
 .then(data => {
     console.log(data)
     //page des produits
@@ -130,7 +122,8 @@ fetch(`https://dummyjson.com/Products?limit=100`, {
         footer.append(bouton)
     }
 })
+/*
 .catch(error => {
     console.error('An error occured. ', error);
 });
-
+*/
