@@ -53,3 +53,14 @@ Prix.append(pPrix);
 
 let decription = document.querySelector('#description');
 decription.textContent = produit.description;
+
+let bouton = document.querySelector("#cart");
+bouton.addEventListener("click", (e)=>{
+    let àajouter = {nom:produit.title,
+                    prix: produit.price,
+                    solde: produit.discountPercentage}
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(àajouter)
+    console.log(cart)
+    localStorage.setItem('cart', JSON.stringify(cart));
+});

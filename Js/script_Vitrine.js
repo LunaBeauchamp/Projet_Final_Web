@@ -1,10 +1,17 @@
 //wheather api
 let user = JSON.parse(localStorage.getItem("info"));
+let pageActu;
 
 function créerVitrine(page, data){
     let produitsliste = [];
     let emplacement = document.querySelector('section')
     for (compt = (page-1)*10; compt<page*10;compt++){
+        if (pageActu != null){
+            pageActu.setAttribute("class", "numPage")
+        }
+        pageActu = document.querySelector(`#page${page}`)
+        pageActu.setAttribute("class", "numPageActu") 
+        
         let produit = data.products[compt];
         produitsliste.push(produit);
 
@@ -12,6 +19,7 @@ function créerVitrine(page, data){
         bouton.setAttribute('class', 'produit');
         bouton.setAttribute("href", "Produit.html")
 
+        document.cookie ='_ga samesite=lax'
         let image = document.createElement('img') 
         image.setAttribute('src', produit.thumbnail) //J'ai un issue pour les cookies qui vient du lien du thumbnail
 
@@ -104,8 +112,6 @@ fetch('https://dummyjson.com/products?limit=0')
 
 .then(data => {
     console.log(data)
-    //page des produits
-    créerVitrine(1, data);
     
     //nombre de pages
     let footer = document.querySelector('footer');
@@ -121,6 +127,9 @@ fetch('https://dummyjson.com/products?limit=0')
         })
         footer.append(bouton)
     }
+
+    //page des produits
+    créerVitrine(1, data);
 })
 /*
 .catch(error => {

@@ -99,3 +99,10 @@ footer{
     height: 30px;
     font-size: 1.3em;
 }
+.numPageActu{
+    background-color: #eaeaea;
+    border: 1x;
+    width: 30px;
+    height: 30px;
+    font-size: 1.3em;
+}
